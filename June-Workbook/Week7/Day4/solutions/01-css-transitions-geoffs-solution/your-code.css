@@ -13,6 +13,8 @@
     transform: rotate(750deg);
 }
 
+/* the purpose of the 750deg rotate is to just showcase how our cubic-bezier is working a little more clearly */
+
 /* Create rocket hover animation here
 
 
