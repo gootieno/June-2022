@@ -50,3 +50,5 @@ const getProducts = async () => {
         console.log(data)
     }
 }
+
+//
