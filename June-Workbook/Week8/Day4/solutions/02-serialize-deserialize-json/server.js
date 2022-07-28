@@ -43,6 +43,9 @@ const server = http.createServer((req, res) => {
     if (reqBody) {
       // parse data based on content-type
 
+      // **SIDE READ** how content type syntax is being handled regarding capitalization
+      // https://nodejs.org/api/http.html#http
+
       if(req.headers['content-type'] === 'application/json'){ // if json was sent parse as json
         req.body = JSON.parse(reqBody)
       } else { //  if x-www-url-formencoded was sent parse with split & map
