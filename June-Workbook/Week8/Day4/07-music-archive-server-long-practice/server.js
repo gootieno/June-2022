@@ -6,6 +6,9 @@ let artists = JSON.parse(fs.readFileSync('./seeds/artists.json'));
 let albums = JSON.parse(fs.readFileSync('./seeds/albums.json'));
 let songs = JSON.parse(fs.readFileSync('./seeds/songs.json'));
 
+
+console.log(variable)
+
 let nextArtistId = 2;
 let nextAlbumId = 2;
 let nextSongId = 2;
@@ -68,6 +71,11 @@ const server = http.createServer((req, res) => {
     /* ========================== ROUTE HANDLERS ========================== */
 
     // Your code here
+    // 
+    if(req.method === 'POST' && req.url.startsWith('/albums')){
+      const urlParts = req.url.split('/') // index 2 = album id
+      console.log('url parts', urlParts)
+    }
 
     res.statusCode = 404;
     res.setHeader('Content-Type', 'application/json');

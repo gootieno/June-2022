@@ -100,12 +100,15 @@ const server = http.createServer((req, res) => {
           return res.end();
         }
 
+        console.log('original ', albums)
 
         const artistAlbums = Object.values(albums).filter(album => album.artistId == artistId);
         const data = {
           ...artist,
           albums: artistAlbums
         };
+
+        console.log('data after creating ', data)
 
         const resBody = JSON.stringify(data);
         res.statusCode = 200;
@@ -351,6 +354,8 @@ const server = http.createServer((req, res) => {
     }
 
     // GET /albums/:albumId/songs
+    //songs/:songId/albums
+    //artist/:artistId/albums
     if (req.method === "GET" && req.url.startsWith("/albums")) {
       const urlParts = req.url.split("/");
       const albumId = urlParts[2];
