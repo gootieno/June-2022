@@ -14,12 +14,7 @@ add.addEventListener("click", async () => {
         /* (use the HTML structure for the current dog image in the index.html
             file to create a new image with the url) */
         // Your code here
-        // <li>
-        //     <figure>
-        //         <img src="https://images.dog.ceo/breeds/hound-afghan/n02088094_1007.jpg" />
-        //         <figcaption>hound-afghan</figcaption>
-        //     </figure>
-        // </li>
+
         /* Add the new dog card as a child to the ul in the .gallery element */
         // Your code here
 
