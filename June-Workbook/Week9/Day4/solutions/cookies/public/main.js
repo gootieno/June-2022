@@ -54,21 +54,29 @@ function clearTheme() {
 
 /* ================================ PHASE 3 ================================ */
 
-// For storing user's display name in cookies
+// For storing user's display name
 function storeName(displayName) {
-  // Your code here
+  //!!START
+  document.cookie = `displayName=${displayName}`;
+  //!!END
 }
 
-// For restoring user's display name from cookies, if set in the past
+// For restoring user's display name, if set in the past
 function restoreName() {
-  // Your code here
+  //!!START
+  const storedName = getCookieValue("displayName");
+  if (storedName) {
+    setInputValue("display-name", storedName);
+  }
+  //!!END
 }
 
-// For clearing user's display name from cookies
+// For clearing user's display name from browser storage
 function clearName() {
-  // Your code here
+  //!!START
+  document.cookie = `displayName=; max-age=0`;
+  //!!END
 }
-
 /* ========================================================================= */
 /* ====================== DO NOT EDIT BELOW THIS LINE ====================== */
 /* ========================================================================= */
